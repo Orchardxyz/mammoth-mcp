@@ -9,7 +9,7 @@ import { z } from 'zod';
 
 const server = new McpServer({
   name: 'mammoth-mcp',
-  version: '0.0.1',
+  version: process.env.PACKAGE_VERSION || '1.0.0',
 });
 
 server.registerTool(
