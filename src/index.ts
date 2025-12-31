@@ -15,7 +15,8 @@ const server = new McpServer({
 server.registerTool(
   'convert_docx_to_html',
   {
-    description: 'Convert a DOCX file to HTML using mammoth. Supports reading from a file path and returns the HTML content.',
+    description:
+      'Convert a DOCX file to HTML using mammoth. Supports reading from a file path and returns the HTML content.',
     inputSchema: {
       filePath: z.string().describe('Absolute path to the DOCX file to convert'),
     },
@@ -24,13 +25,13 @@ server.registerTool(
     try {
       const absolutePath = path.resolve(filePath);
       await fs.access(absolutePath);
-      
+
       const result = await mammoth.convertToHtml({ path: absolutePath });
-      
+
       let output = `# Conversion Result\n\n`;
       output += `**File**: ${absolutePath}\n\n`;
       output += `## HTML Output:\n\n\`\`\`html\n${result.value}\n\`\`\`\n\n`;
-      
+
       if (result.messages.length > 0) {
         output += `## Messages:\n\n`;
         result.messages.forEach((msg: any) => {
@@ -72,7 +73,7 @@ server.registerTool(
     try {
       const absolutePath = path.resolve(filePath);
       await fs.access(absolutePath);
-      
+
       const result = await mammoth.convertToHtml(
         { path: absolutePath },
         {
@@ -86,11 +87,11 @@ server.registerTool(
           }),
         }
       );
-      
+
       let output = `# Conversion Result (with images)\n\n`;
       output += `**File**: ${absolutePath}\n\n`;
       output += `## HTML Output:\n\n\`\`\`html\n${result.value}\n\`\`\`\n\n`;
-      
+
       if (result.messages.length > 0) {
         output += `## Messages:\n\n`;
         result.messages.forEach((msg: any) => {
