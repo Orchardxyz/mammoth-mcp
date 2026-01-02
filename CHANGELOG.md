@@ -1,5 +1,11 @@
 # mammoth-mcp
 
+## 1.0.3
+
+### Patch Changes
+
+- Fix workflow to prevent pnpm errors by removing changesets auto-publish
+
 ## 1.0.2
 
 ### Patch Changes
