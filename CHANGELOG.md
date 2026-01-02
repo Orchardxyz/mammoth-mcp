@@ -1,5 +1,11 @@
 # mammoth-mcp
 
+## 1.0.2
+
+### Patch Changes
+
+- cfe2be5: Enable OIDC trusted publishing for automated releases
+
 ## 1.0.0
 
 ### Initial Release
