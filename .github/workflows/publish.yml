@@ -54,4 +54,6 @@ jobs:
           prerelease: false
 
       - name: Publish to NPM
-        run: npm publish --access public
+        run: npm publish
+        env:
+          NPM_CONFIG_PROVENANCE: false
