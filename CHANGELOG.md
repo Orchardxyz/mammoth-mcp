@@ -1,5 +1,16 @@
 # mammoth-mcp
 
+## 1.1.0
+
+### Minor Changes
+
+- Add new conversion tools and expand mammoth options support
+  - Add `extract_raw_text` tool for extracting plain text from DOCX files
+  - Add `convert_docx_to_markdown` tool for converting DOCX to Markdown format
+  - Expand all tools with advanced mammoth options: styleMap, ignoreEmptyParagraphs, idPrefix, includeDefaultStyleMap, includeEmbeddedStyleMap
+  - Improve error handling with detailed troubleshooting suggestions
+  - Add ESM support and modernize build configuration
+
 ## 1.0.3
 
 ### Patch Changes
