@@ -1,6 +1,6 @@
 {
   "name": "mammoth-mcp",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "packageManager": "pnpm@10.12.1",
   "description": "MCP for mammoth - Convert DOCX files to HTML",
   "type": "module",

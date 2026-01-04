@@ -1,5 +1,11 @@
 # mammoth-mcp
 
+## 1.1.1
+
+### Patch Changes
+
+- Update usage documentation with standard npx configuration for MCP. Added recommended npx-based setup and corrected local installation path from dist/cjs to dist/esm.
+
 ## 1.1.0
 
 ### Minor Changes
