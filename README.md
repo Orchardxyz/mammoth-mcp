@@ -29,30 +29,43 @@ $ npm run build
 
 ### Configure MCP Client
 
-Add the server to your MCP client configuration (e.g., Claude Desktop):
+Add the server to your MCP client configuration (e.g., Claude Desktop).
+
+The configuration file is located at:
+- **macOS**: `~/Library/Application Support/Claude/claude_desktop_config.json`
+- **Windows**: `%APPDATA%\Claude\claude_desktop_config.json`
+
+#### Option 1: Using npx (Recommended)
+
+This will automatically install and run the latest version:
+
+```json
+{
+  "mcpServers": {
+    "mammoth": {
+      "command": "npx",
+      "args": ["-y", "mammoth-mcp"]
+    }
+  }
+}
+```
+
+#### Option 2: Using local installation
+
+If you've cloned the repository locally:
 
 ```json
 {
   "mcpServers": {
     "mammoth": {
       "command": "node",
-      "args": ["/absolute/path/to/mammoth-mcp/dist/cjs/index.js"]
+      "args": ["/absolute/path/to/mammoth-mcp/dist/esm/index.js"]
     }
   }
 }
 ```
 
-Or if installed globally:
-
-```json
-{
-  "mcpServers": {
-    "mammoth": {
-      "command": "mammoth-mcp"
-    }
-  }
-}
-```
+After updating the configuration, restart Claude Desktop for the changes to take effect.
 
 ### Available Tools
 
